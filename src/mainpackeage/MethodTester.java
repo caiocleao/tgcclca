@@ -59,32 +59,32 @@ public class MethodTester extends JFrame {
     	//final XYSeries baseLine = new XYSeries("BaseLine");
     	FileManager fm = new FileManager();
         
-    	List dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterOne");
+    	List dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterOne");
         double mplClock = objectiveFunction(dataset);
         double mmqClock = clockScrewMmq(dataset);
         System.out.println("My Router ( MPL | MMQ )");
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(1, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterTwo");
         //mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(2, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterThree");
         //mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(3, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterFour");
         //mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(4, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterFive");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -93,34 +93,34 @@ public class MethodTester extends JFrame {
         mplClock = 0.0;
         System.out.println("adsl ( MPL | MMQ )");
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslOne");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslOne");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(1, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslTwo");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(2, mmqClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslThree");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(3, mmqClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslFour");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(4, mmqClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslFive");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -130,31 +130,31 @@ public class MethodTester extends JFrame {
         
         mplClock = 0.0;
         System.out.println("Bruna ( MPL | MMQ )");
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaOne");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaOne");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(1, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaTwo");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(2, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaThree");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(3, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaFour");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(4, mmqClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaFive");
         // mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -163,25 +163,25 @@ public class MethodTester extends JFrame {
 
         /*
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterTwo");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(2, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterThree");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(3, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterFour");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplValue.add(4, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/myRouterFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/myRouterFive");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -190,34 +190,34 @@ public class MethodTester extends JFrame {
         mplClock = 0.0;
         System.out.println("adsl ( MPL | MMQ )");
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslOne");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslOne");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(1, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslTwo");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(2, mplClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslThree");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(3, mplClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslFour");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplAdsl.add(4, mplClock);
         
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/adslFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/adslFive");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -227,31 +227,31 @@ public class MethodTester extends JFrame {
         
         mplClock = 0.0;
         System.out.println("Bruna ( MPL | MMQ )");
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaOne");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaOne");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(1, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaTwo");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaTwo");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(2, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaThree");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaThree");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(3, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaFour");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaFour");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
         mplBruna.add(4, mplClock);
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/brunaFive");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/brunaFive");
         mplClock = objectiveFunction(dataset);
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
@@ -260,7 +260,7 @@ public class MethodTester extends JFrame {
         mplClock = 0.0;
         System.out.println("Renata ( MPL | MMQ )");
         
-        dataset = fm.getDataset("/home/caio/Documents/tccFiles/correctFiles/renataOne");
+        dataset = fm.getDataset("/home/caio/workspace/tcc/correctFiles/renataOne");
         mplClock = objectiveFunction(dataset) / 1000000000;
         mmqClock = clockScrewMmq(dataset);
         System.out.println(df.format(mplClock) + " | " + df.format(mmqClock) + " " + dataset.size);
