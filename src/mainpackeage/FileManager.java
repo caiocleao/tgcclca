@@ -12,6 +12,9 @@ public class FileManager {
 	double xofBiggest = 0.0;
 	double secondBiggestValue = 0.0;
 	double xofSecondBiggest = 0.0;
+	double previousT = 0.0;
+	double totalDeltaT = 0.0;
+	int contador;
 	DecimalFormat df = new DecimalFormat ("#.########");
 	
 	
@@ -28,6 +31,9 @@ public class FileManager {
 		double apTimestamp = 0.0;
 		double deviceTimestamp = 0.0;
 		double xi, ti, tzaodif;
+		previousT = 0.0;
+		totalDeltaT = 0.0;
+		contador = 0;
 		
 		List packetList = new List();
 		//System.out.println("BEGIN");
@@ -41,14 +47,7 @@ public class FileManager {
 				String[] brokenHours = arrivalString.split(" ");
 				apTimelong = hex2decimal(brokenHours[brokenHours.length-1]);
 				apTimestamp = Double.parseDouble(Long.toString(apTimelong));
-		
-				
-			} else if ( line.contains("MAC timestamp:") ) {
-				
-				brokenLine = line.split(" ");
-				deviceTimestamp = Long.parseLong(brokenLine[brokenLine.length-1]);
-				//System.out.println(df.format(deviceTimestamp));
-				
+				//System.out.println(df.format(apTimestamp));
 				if ( firstPacket ) {
 					
 					packetList.xUm = deviceTimestamp;
@@ -60,27 +59,21 @@ public class FileManager {
 				xi = deviceTimestamp - packetList.xUm;
 				tzaodif = apTimestamp - packetList.tUm; 
 				ti =  tzaodif - xi;
-				
-				//System.out.println("xi: " + df.format(xi));
-				//System.out.println("ti: " + df.format(ti));
-				
-				if ( ti > biggestValue ) {
-					biggestValue = ti;
-					xofBiggest = xi;
-				} else if ( ti > secondBiggestValue ) {
-					secondBiggestValue = ti;
-					xofSecondBiggest = xi;
-				}
-				
+				contador++;
 				packetList.addElement(xi, ti);
+				
+			} else if ( line.contains("MAC timestamp:") ) {
+				
+				brokenLine = line.split(" ");
+				deviceTimestamp = Long.parseLong(brokenLine[brokenLine.length-1]);
 				
 			}
 			
 			line =  br.readLine();
 			
-		} while ( line != null ) ;
+		} while ( line != null && contador <= 400 ) ;
 		br.close();
-		
+		firstPacket = true;
 		return packetList;
 		
 	}

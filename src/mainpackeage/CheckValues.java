@@ -1,6 +1,5 @@
 package mainpackeage;
 import java.text.DecimalFormat;
-import org.apache.commons.math3.*;
 
 public class CheckValues {
 	
